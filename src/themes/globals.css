@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px #000;
+  color: #fff;
+  transition: 0.3s ease all;
+}
+
+button:active {
+  padding-top: -10px;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px #c6c2c2;
+}
+
+.textInput {
+  border-radius: 20px;
+  margin-right: 50px;
+  padding: 15px;
+  width: 200px;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px #000;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease all;
+}
+
+.textInput:focus {
+  transform: scale(1.1);
+  outline: none;
+  border: none;
+  box-shadow: 0 4px 8px #c6c2c2;
+}
+
+.textInput::placeholder {
+  color: #fff;
+}
+
+.tmdb {
+  color: #fff;
+  margin-left: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

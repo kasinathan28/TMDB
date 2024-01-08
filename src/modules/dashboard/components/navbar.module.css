@@ -1,0 +1,22 @@
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 90px;
+  background: #443a67;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+}
+
+
+
+
