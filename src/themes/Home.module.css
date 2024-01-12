@@ -1,3 +1,9 @@
+.searh{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .main {
   display: flex;
   flex-direction: column;

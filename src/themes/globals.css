@@ -11,6 +11,7 @@ button {
   box-shadow: 0 4px 8px #000;
   color: #fff;
   transition: 0.3s ease all;
+  margin: 20px;
 }
 
 button:active {
@@ -21,11 +22,14 @@ button:active {
 
 .textInput {
   border-radius: 20px;
-  margin-right: 50px;
-  padding: 15px;
-  width: 200px;
-  color: #fff;
+  padding: 20px;
+  width: 300px;
+  color: #000;
+  margin-left: 40%;
   border: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   box-shadow: 0 4px 8px #000;
   background: rgba(255, 255, 255, 0.2);
   transition: 0.3s ease all;
@@ -39,7 +43,7 @@ button:active {
 }
 
 .textInput::placeholder {
-  color: #fff;
+  color: #000;
 }
 
 .tmdb {

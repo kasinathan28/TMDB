@@ -1,58 +1,39 @@
-// components/Cards.js
-import React, { useState, useEffect } from "react";
+// components/Cards.tsx
+import React from "react";
 import style from "./cards.module.css";
-import { fetchTrendingMovies } from "../services/movieService";
 
-interface Movie {
+interface Media {
   id: number;
   title: string;
   vote_average: string;
   poster_path: string;
 }
 
-function Cards() {
-  const [movieData, setMovieData] = useState<Movie[] | null>(null);
+interface CardsProps {
+  movieData: Media[] | null;
+}
 
-
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const movies = await fetchTrendingMovies();
-        setMovieData(movies);
-      } catch (error) {
-        console.error("Error fetching trending movies:", error);
-      }
-    };
-
-    fetchMovies();
-  }, []);
-
+function Cards({ movieData }: CardsProps) {
   return (
     <div className={style.cardContainer}>
       {movieData && movieData.length > 0 ? (
-        movieData.map((movie: Movie) => (
-          <div
-            key={movie.id}
-            className={style.cardStyle}
-         
-          >
+        movieData.map((media: Media) => (
+          <div key={media.id} className={style.cardStyle}>
             <div className={style.imageDiv}>
               <img
                 className={style.imageStyle}
-                alt={movie.title}
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-               
+                alt={media.title}
+                src={`https://image.tmdb.org/t/p/w500/${media.poster_path}`}
               />
             </div>
             <div className={style.meta}>
-              <h3>{movie.title}</h3>
-              <p>{movie.vote_average}</p>
+              <h3>{media.title}</h3>
+              <p>{media.vote_average}</p>
             </div>
           </div>
         ))
       ) : (
-        <p>Loading...</p>
+        <p>No movies available</p>
       )}
     </div>
   );

@@ -1,6 +1,8 @@
 const fetchTrendingMovies = async () => {
 
   try {
+    console.log("Api callied to fetch");
+    
     const options = {
       method: 'GET',
       headers: {

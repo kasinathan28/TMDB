@@ -1,4 +1,3 @@
-// components/DashboardAd.js
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -37,6 +36,7 @@ export default function DashboardAd() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    nextArrow: <></>, // Pass an empty ReactNode as a placeholder
   };
 
   return (

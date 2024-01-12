@@ -11,7 +11,6 @@ function Navbar() {
       </div>
       <div className={style.right}>
         <Button></Button>
-        <SearchBar  placeholder="search"/>
       </div>
     </div>
   );

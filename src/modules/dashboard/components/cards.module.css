@@ -16,16 +16,16 @@
   padding-bottom: 20px;
 }
 
-
 .imageDiv {
+  width: 100%;
     position: relative;
     overflow: hidden;
     transition: 0.3s ease all;
   }
 
-
 .imageDiv:hover{
-    transform: scale(1.1);
+  
+    transform: scale(1.05);
 }  
 
 
@@ -35,6 +35,8 @@
   object-fit: cover;
   transition: transform 0.3s;
 }
+
+
 
 .meta {
   background-color: #fff;
