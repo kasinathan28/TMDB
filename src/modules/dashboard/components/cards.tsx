@@ -1,6 +1,7 @@
 // components/Cards.tsx
 import React from "react";
 import style from "./cards.module.css";
+import { useRouter } from "next/router";
 
 interface Media {
   id: number;
@@ -14,11 +15,21 @@ interface CardsProps {
 }
 
 function Cards({ movieData }: CardsProps) {
+  const router = useRouter();
+
+  const handleCardClick = (id: number) => {
+    router.push(`/details/${id}`);
+  };
+
   return (
     <div className={style.cardContainer}>
       {movieData && movieData.length > 0 ? (
         movieData.map((media: Media) => (
-          <div key={media.id} className={style.cardStyle}>
+          <div
+            key={media.id}
+            className={style.cardStyle}
+            onClick={() => handleCardClick(media.id)}
+          >
             <div className={style.imageDiv}>
               <img
                 className={style.imageStyle}

@@ -10,7 +10,7 @@ function Navbar() {
         <Header></Header>
       </div>
       <div className={style.right}>
-        <Button></Button>
+        {/* <Button></Button> */}
       </div>
     </div>
   );

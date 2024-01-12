@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import style from './dashboardad.module.css';
-import { fetchTrendingMovies } from '../services/movieService';
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import style from "./dashboardad.module.css";
+import { fetchTrendingMovies } from "../services/movieService";
 
 interface Movie {
   id: number;
@@ -11,7 +11,7 @@ interface Movie {
   backdrop_path: string;
 }
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 
 export default function DashboardAd() {
   const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
@@ -36,7 +36,7 @@ export default function DashboardAd() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    nextArrow: <></>, // Pass an empty ReactNode as a placeholder
+    nextArrow: <></>,
   };
 
   return (
