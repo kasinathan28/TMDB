@@ -11,6 +11,7 @@ interface Movie {
   backdrop_path: string;
 }
 
+
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 
 export default function DashboardAd() {

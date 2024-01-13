@@ -1,9 +1,7 @@
 
 interface SearchResult {
-    // Define the properties of your search result here
     id: number;
     title: string;
-    // Add other properties as needed
   }
   
   export const searchMovies = async (query: string): Promise<SearchResult[]> => {
