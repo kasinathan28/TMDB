@@ -3,7 +3,7 @@ import React from "react";
 import style from "./cards.module.css";
 import { useRouter } from "next/router";
 
-interface Media {
+export interface Media {
   id: number;
   title: string;
   vote_average: string;
@@ -16,7 +16,7 @@ interface CardsProps {
   movieData: Media[] | null;
 }
 
-function Cards({ movieData }: CardsProps) {
+export default function Cards({ movieData }: CardsProps) {
   const router = useRouter();
 
   const handleCardClick = (id: number) => {
@@ -52,4 +52,4 @@ function Cards({ movieData }: CardsProps) {
   );
 }
 
-export default Cards;
+
