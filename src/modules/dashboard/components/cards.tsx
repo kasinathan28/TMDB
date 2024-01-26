@@ -10,6 +10,8 @@ interface Media {
   poster_path: string;
 }
 
+
+
 interface CardsProps {
   movieData: Media[] | null;
 }
