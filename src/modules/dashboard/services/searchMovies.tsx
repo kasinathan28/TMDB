@@ -26,4 +26,3 @@ interface SearchResult {
       throw error;
     }
   };
-  

@@ -7,6 +7,8 @@ import { fetchTrendingMovies } from "@/modules/dashboard/services/movieService";
 interface SearchResult {
   id: number;
   title: string;
+  vote_average: string;
+  poster_path: string;
 }
 
 interface SearchBarProps {
@@ -35,7 +37,7 @@ function SearchBar({ placeholder }: SearchBarProps) {
   const handleSearch = async () => {
     try {
       const results = await searchMovies(query);
-      setSearchResults(results);
+      setSearchResults(results as SearchResult[]);
       setShowSearchResults(true);
     } catch (error) {
       console.error("Error searching for movies:", error);
